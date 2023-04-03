@@ -9,11 +9,11 @@ const query = groq`
 *[_type=='post']{
   ...,
   author->,
-  category[]->
-} | order{_createdAt desc}
-`;
+   categories[]->
+} | order(_createdAt desc)`;
 
 export default async function Homepage() {
+  console.log(previewData());
   if (previewData()) {
     return (
       <PreviewSuspense
@@ -26,11 +26,16 @@ export default async function Homepage() {
         }
       >
         <PreviewBlogList query={query} />
+        <div> Preview mode</div>
       </PreviewSuspense>
     );
   }
 
   const posts = await client.fetch(query);
-
-  return <BlogList posts={posts} />
+  return (
+    <>
+      <BlogList posts={posts} />
+      <div> Not in Preview mode</div>
+    </>
+  );
 }
