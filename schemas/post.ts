@@ -52,16 +52,12 @@ export default defineType({
       }
     ),
     defineField({
-      name: "content",
-      title: "Content",
-      type: "array",
-      of: [{ type: "block" }],
+      name: "author",
+      title: "Author",
+      type: "reference",
+      to: [{ type: authorType.name }],
     }),
-    defineField({
-      name: "excerpt",
-      title: "Excerpt",
-      type: "text",
-    }),
+
     defineField({
       name: "coverImage",
       title: "Cover Image",
@@ -71,16 +67,16 @@ export default defineType({
       },
     }),
     defineField({
+      name: "content",
+      title: "Content",
+      type: "array",
+      of: [{ type: "block" }],
+    }),
+    defineField({
       name: "date",
       title: "Date",
       type: "datetime",
       initialValue: () => new Date().toISOString(),
-    }),
-    defineField({
-      name: "author",
-      title: "Author",
-      type: "reference",
-      to: [{ type: authorType.name }],
     }),
   ],
   preview: {
