@@ -13,7 +13,6 @@ const query = groq`
 } | order(_createdAt desc)`;
 
 export default async function Homepage() {
-  console.log(previewData());
   if (previewData()) {
     return (
       <PreviewSuspense
@@ -32,6 +31,7 @@ export default async function Homepage() {
   }
 
   const posts = await client.fetch(query);
+
   return (
     <>
       <BlogList posts={posts} />
