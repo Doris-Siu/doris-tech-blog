@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@heroicons/react": "^2.0.17",
     "@portabletext/react": "^2.0.2",
     "@sanity/icons": "^2.1.0",
     "@sanity/image-url": "^1.0.2",

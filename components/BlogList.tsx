@@ -1,5 +1,6 @@
 import Image from "next/image";
 import urlFor from "../lib/urlFor";
+import { ArrowUpRightIcon } from "@heroicons/react/24/solid";
 
 type Props = {
   posts: Post[];
@@ -10,7 +11,7 @@ export default function BlogList({ posts }: Props) {
     <div>
       <hr className="border-[#F7AB0A] mb-10" />
 
-      <div>
+      <div className="grid grid-cols-1 md:grid-cols-2 px-10 gap-10 gap-y-16 pb-24">
         {posts.map((post) => (
           <div key={post._id} className="group cursor-pointer">
             <div className="relative w-full h-80 drop-shadow-xl group-hover:scale-105 transition-transform duration-200 ease-out">
@@ -50,6 +51,10 @@ export default function BlogList({ posts }: Props) {
                 {post.content[0].children[0].text}
               </p>
             </div>
+            <p className="mt-5 font-bold flex items-center group-hover:underline">
+              Read More
+              <ArrowUpRightIcon className="nl-2 h-4 w-4" />
+            </p>
           </div>
         ))}
       </div>
