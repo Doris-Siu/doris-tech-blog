@@ -78,7 +78,14 @@ export default defineType({
       type: "datetime",
       initialValue: () => new Date().toISOString(),
     }),
+    defineField({
+      name: "body",
+      title: "Body",
+      type: "array",
+      of: [{ type: "block" }, { type: "image" }],
+    }),
   ],
+
   preview: {
     select: {
       title: "title",
