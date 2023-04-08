@@ -27,7 +27,12 @@ export default async function Homepage() {
         }
       >
         <PreviewBlogList query={query} />
-        <div> Preview mode</div>
+        <div className="text-[#707070]">
+          <a href="https://www.freepik.com/free-vector/pink-polygon-background_1088045.htm#query=pink%20polygon&position=36&from_view=keyword&track=ais">
+            Image by Harryarts
+          </a>
+          on Freepik
+        </div>
       </PreviewSuspense>
     );
   }
@@ -35,9 +40,14 @@ export default async function Homepage() {
   const posts = await client.fetch(query);
 
   return (
-    <>
+    <div>
       <BlogList posts={posts} />
-      <div> Not in Preview mode</div>
-    </>
+      <div className="text-[#707070]">
+        <a href="https://www.freepik.com/free-vector/pink-polygon-background_1088045.htm#query=pink%20polygon&position=36&from_view=keyword&track=ais">
+          Image by Harryarts
+        </a>
+        on Freepik
+      </div>
+    </div>
   );
 }

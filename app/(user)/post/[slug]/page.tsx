@@ -15,7 +15,7 @@ export const revalidate = 30; //revalidate this page every 30 seconds
 
 export async function generateStaticParams() {
   const query = groq`
-  [_type=='post']{
+  *[_type=='post']{
  slug
 }`;
 
@@ -39,9 +39,9 @@ export default async function Post({ params: { slug } }: Props) {
 
   return (
     <article className="px-10 pb-28">
-      <section className="space-y-2 border border-black text-white">
+      <section className="space-y-2 text-white">
         <div className="relative min-h-56 flex flex-col md:flex-row justify-between">
-          <div className="absolute top-0 w-full h-full opacity-10 blur-sm p-10">
+          <div className="absolute top-0 w-full h-full opacity-20 blur-sm p-10">
             <Image
               className="object-cover object-center mx-auto"
               src={urlFor(post.coverImage).url()}
@@ -50,9 +50,9 @@ export default async function Post({ params: { slug } }: Props) {
             />
           </div>
 
-          <section className="p-5 bg-black w-full">
+          <section className="p-5 bg-[#9e4e5a] w-full">
             <div className="flex flex-col md:flex-row justify-between gap-y-5">
-              <div>
+              <div className="text-[#C0C0C0]">
                 <h1 className="text-4xl font-extrabold">{post.title}</h1>
                 <p>
                   {new Date(post._createdAt).toLocaleString("en-UK", {
@@ -70,7 +70,7 @@ export default async function Post({ params: { slug } }: Props) {
                   height={40}
                   width={40}
                 />
-                <div className="w-64">
+                <div className="text-[#C0C0C0] w-64">
                   <h3 className="text-lg font-bold">{post.author.name}</h3>
                   <div>{/* Author Bio */}</div>
                 </div>
@@ -85,7 +85,7 @@ export default async function Post({ params: { slug } }: Props) {
                 {post.tags.map((tag, index) => (
                   <p
                     key={index}
-                    className="bg-gray-800 text-white px-3 py-1 rounded-full text-sm font-semibold mt-4"
+                    className="bg-[#C0C0C0] text-[#9e4e5a] px-3 py-1 rounded-full text-sm font-semibold mt-4"
                   >
                     {tag}
                   </p>
