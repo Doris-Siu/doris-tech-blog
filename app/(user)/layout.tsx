@@ -1,6 +1,7 @@
 import "../../src/app/globals.css";
 import Header from "../../components/Header";
 import Banner from "../../components/Banner";
+import Footer from "../../components/Footer";
 
 export const metadata = {
   title: "The Blog",
@@ -18,6 +19,7 @@ export default function RootLayout({
         <Header />
         <Banner />
         {children}
+        <Footer />
       </body>
     </html>
   );

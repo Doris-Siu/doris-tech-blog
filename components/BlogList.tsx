@@ -53,7 +53,7 @@ export default function BlogList({ posts }: Props) {
                   {post.content[0].children[0].text}
                 </p>
               </div>
-              <p className="mt-5 font-bold flex items-center group-hover:underline">
+              <p className="mt-5 font-bold flex items-center group-hover:underline hover:text-[#F7AB0A]">
                 Read More
                 <ArrowUpRightIcon className="nl-2 h-4 w-4" />
               </p>
