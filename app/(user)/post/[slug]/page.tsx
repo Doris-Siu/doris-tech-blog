@@ -67,8 +67,8 @@ export default async function Post({ params: { slug } }: Props) {
                   className="rounded-full"
                   src={urlFor(post.author.picture).url()}
                   alt={post.author.name}
-                  height={40}
-                  width={40}
+                  height={50}
+                  width={50}
                 />
                 <div className="text-white w-64">
                   <h3 className="text-lg font-bold">{post.author.name}</h3>

@@ -26,7 +26,7 @@ export default function Header() {
         </p>
         <Link
           href="mailto:doris.siu.my@gmail.com"
-          className="px-5 py-3 md:text-base bg-[#f3647d] text-white flex items-center rounded-full text-center text-lg font-medium"
+          className="px-5 py-3 md:text-base bg-white text-[#f3647d] flex items-center rounded-full text-center text-lg font-medium"
         >
           Get in touch with me
         </Link>
