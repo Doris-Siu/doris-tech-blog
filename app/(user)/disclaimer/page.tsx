@@ -1,7 +1,7 @@
 import { groq } from "next-sanity";
 import { client } from "../../../lib/sanity-client";
 import Image from "next/image";
-import urlFor from "../../../../lib/urlFor";
+import urlFor from "../../../lib/urlFor";
 import { PortableText } from "@portabletext/react";
 import { RichTextComponents } from "../../../components/RichTextComponents";
 
@@ -20,7 +20,7 @@ export default async function Disclaimer({ params: { slug } }: Props) {
 }
 `;
 
-  const disclaimer: Disclaimer = await client.fetch(query);
+  const disclaimer = await client.fetch(query);
 
   return (
     <article className="px-10 pt-14 pb-28">

@@ -95,12 +95,8 @@ export default async function Post({ params: { slug } }: Props) {
           </section>
         </div>
       </section>
-      <section className="px-10 py-5 mt-10 rounded-3xl">
-        <PortableText
-          className="pt-0.5"
-          value={post.body}
-          components={RichTextComponents}
-        />
+      <section className="px-10 py-5 pb-0.5 mt-10 rounded-3xl">
+        <PortableText value={post.body} components={RichTextComponents} />
       </section>
     </article>
   );

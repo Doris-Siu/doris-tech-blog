@@ -7,18 +7,20 @@ type Base = {
 };
 
 interface Post extends Base {
-  author: Author;
-  body: Block[];
-  categories: Category[];
-  mainImage: Image;
-  slug: Slug;
   title: string;
-  description: string;
+  author: Author;
+  tags: string[];
+  categories: Category[];
+  coverImage: Image;
+  slug: Slug;
+  date: Date;
+  content: Block[];
+  body: Block[];
 }
 
 interface Author extends Base {
   bio: Block[];
-  image: Image;
+  picture: Image;
   name: string;
   slug: Slug;
 }
@@ -26,6 +28,10 @@ interface Author extends Base {
 interface Image {
   _type: "image";
   asset: Reference;
+}
+
+interface Date {
+  _type: "DateTime";
 }
 
 interface Reference {
@@ -53,12 +59,7 @@ interface Span {
   text: string;
 }
 
-interface Category extends Base {
-  description: string;
-  title: string;
-}
-
-interface MainImage {
+interface coverImage {
   _type: "image";
   asset: Reference;
 }
