@@ -6,12 +6,6 @@ export default function Banner() {
         <h2 className="text-[#707070] mt-5 md:mt-0">
           Welcome to my tech blog, where I share my knowledge and insights on
           all things web development. <br />
-          <a
-            className="underline hover:text-[#f3647d]"
-            href="https://www.linkedin.com/in/doris-siu/"
-          >
-            My LinkedIn here
-          </a>
         </h2>
       </div>
     </div>

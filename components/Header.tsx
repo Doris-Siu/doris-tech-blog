@@ -15,7 +15,7 @@ export default function Header() {
             alt="logo"
           />
         </Link>
-        <h1 className="text-lg font-medium">DORIS</h1>
+        {/* <h1 className="text-lg font-medium">DORIS</h1> */}
       </div>
 
       <div className="flex items-center space-x-2 gap-5">
@@ -25,10 +25,10 @@ export default function Header() {
           TECH&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; MORE
         </p>
         <Link
-          href="mailto:doris.siu.my@gmail.com"
+          href="https://www.linkedin.com/in/doris-siu/"
           className="px-5 py-3 md:text-base bg-white text-[#f3647d] flex items-center rounded-full text-center text-lg font-medium"
         >
-          Get in touch with me
+          Get in touch
         </Link>
       </div>
     </header>
