@@ -1,11 +1,11 @@
-import { BookIcon } from "@sanity/icons";
+import { BellIcon } from "@sanity/icons";
 import { format, parseISO } from "date-fns";
 import { defineField, defineType } from "sanity";
 
 export default defineType({
   name: "disclaimer",
   title: "Disclaimer",
-  icon: BookIcon,
+  icon: BellIcon,
   type: "document",
   fields: [
     defineField({

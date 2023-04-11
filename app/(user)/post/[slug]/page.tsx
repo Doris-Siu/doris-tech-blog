@@ -39,7 +39,7 @@ export default async function Post({ params: { slug } }: Props) {
 
   return (
     <article className="px-10 pb-28">
-      <section className="space-y-2 text-white">
+      <section className="space-y-2 text-white rounded-3xl">
         <div className="relative min-h-56 flex flex-col md:flex-row justify-between">
           <div className="absolute top-0 w-full h-full opacity-20 blur-sm p-10">
             <Image
@@ -50,12 +50,12 @@ export default async function Post({ params: { slug } }: Props) {
             />
           </div>
 
-          <section className="p-5 bg-[#9e4e5a] w-full">
+          <section className="p-10 bg-[#f3647d] w-full rounded-3xl">
             <div className="flex flex-col md:flex-row justify-between gap-y-5">
-              <div className="text-[#C0C0C0]">
+              <div className="text-white">
                 <h1 className="text-4xl font-extrabold">{post.title}</h1>
                 <p>
-                  {new Date(post._createdAt).toLocaleString("en-UK", {
+                  {new Date(post.date).toLocaleString("en-UK", {
                     day: "numeric",
                     month: "long",
                     year: "numeric",
@@ -70,7 +70,7 @@ export default async function Post({ params: { slug } }: Props) {
                   height={40}
                   width={40}
                 />
-                <div className="text-[#C0C0C0] w-64">
+                <div className="text-white w-64">
                   <h3 className="text-lg font-bold">{post.author.name}</h3>
                   <div>{/* Author Bio */}</div>
                 </div>
@@ -85,7 +85,7 @@ export default async function Post({ params: { slug } }: Props) {
                 {post.tags.map((tag, index) => (
                   <p
                     key={index}
-                    className="bg-[#C0C0C0] text-[#9e4e5a] px-3 py-1 rounded-full text-sm font-semibold mt-4"
+                    className="bg-white text-[#f3647d] px-3 py-1 rounded-full text-sm font-semibold mt-4"
                   >
                     {tag}
                   </p>
@@ -95,7 +95,13 @@ export default async function Post({ params: { slug } }: Props) {
           </section>
         </div>
       </section>
-      <PortableText value={post.body} components={RichTextComponents} />
+      <section className="px-10 py-5 mt-10 rounded-3xl">
+        <PortableText
+          className="pt-0.5"
+          value={post.body}
+          components={RichTextComponents}
+        />
+      </section>
     </article>
   );
 }

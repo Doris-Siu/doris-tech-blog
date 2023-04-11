@@ -10,7 +10,7 @@ type Props = {
 export default function BlogList({ posts }: Props) {
   return (
     <div>
-      <hr className="border-[#F7AB0A] mb-10" />
+      <hr className="border-[#f3647d] mb-10" />
 
       <div className="grid grid-cols-1 md:grid-cols-2 px-10 gap-10 gap-y-16 pb-24">
         {posts.map((post) => (
@@ -23,11 +23,11 @@ export default function BlogList({ posts }: Props) {
                   alt={post.author.name}
                   fill
                 />
-                <div className="absolute bottom-0 w-full bg-opacity-20 bg-[#707070] backdrop-blur-lg text-black p-5 flex justify-between">
+                <div className="absolute bottom-0 w-full bg-opacity-20 backdrop-blur-lg text-white p-5 flex justify-between">
                   <div>
                     <p className="font-bold">{post.title}</p>
                     <p>
-                      {new Date(post._createdAt).toLocaleString("en-UK", {
+                      {new Date(post.date).toLocaleString("en-UK", {
                         day: "numeric",
                         month: "long",
                         year: "numeric",
@@ -38,7 +38,7 @@ export default function BlogList({ posts }: Props) {
                     {post.tags.map((tag, index) => (
                       <div
                         key={index}
-                        className="bg-[#9e4e5a] text-center text-[#C0C0C0] px-3 py-1 rounded-full text-em font-semibold"
+                        className="bg-[#f3647d] text-center text-white px-3 py-1 rounded-full text-em font-semibold"
                       >
                         <p>{tag}</p>
                       </div>
@@ -48,12 +48,11 @@ export default function BlogList({ posts }: Props) {
               </div>
 
               <div className="mt-5 flex-1">
-                <p className="underline text-lg font-bold">{post.title}</p>
                 <p className="text-[#707070] line-clamp-2">
                   {post.content[0].children[0].text}
                 </p>
               </div>
-              <p className="mt-5 font-bold flex items-center group-hover:underline hover:text-[#F7AB0A]">
+              <p className="mt-5 font-bold flex items-center group-hover:underline hover:text-[#f3647d]">
                 Read More
                 <ArrowUpRightIcon className="nl-2 h-4 w-4" />
               </p>

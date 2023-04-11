@@ -10,8 +10,7 @@ const query = groq`
 *[_type=='post']{
   ...,
   author->,
-   categories[]->
-} | order(_createdAt desc)`;
+} | order(date desc)`;
 
 export const revalidate = 30; //revalidate this page every 30 seconds
 

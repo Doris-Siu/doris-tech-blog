@@ -23,7 +23,7 @@ export default async function Disclaimer({ params: { slug } }: Props) {
   const disclaimer: Disclaimer = await client.fetch(query);
 
   return (
-    <article className="px-10 pb-28">
+    <article className="px-10 pt-14 pb-28">
       <PortableText value={disclaimer.body} components={RichTextComponents} />
     </article>
   );
