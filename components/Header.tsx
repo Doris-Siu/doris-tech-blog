@@ -17,11 +17,12 @@ export default function Header() {
       </div>
 
       <div className="flex items-center space-x-2 gap-5">
-        <p className="mt-5 md:mt-2 text-[#707070] text-xs md:text-lg font-medium">
-          PROJECT&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-          INSIGHT&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-          TECH&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; MORE
-        </p>
+        <div className="flex gap-2 pb-3 pr-0 md:pb-0 md:gap-8 mt-5 md:mt-2 text-[#707070] text-xs md:text-lg font-medium">
+          <p>PROJECT</p>
+          <p>INSIGHT</p>
+          <p>TECH</p>
+          <p>MORE</p>
+        </div>
         <Link
           href="https://www.linkedin.com/in/doris-siu/"
           className="px-2 py-1 md:px-5 md:py-3 bg-white text-[#f3647d] flex items-center rounded-full text-center text-sm md:text-lg font-medium"
