@@ -4,7 +4,6 @@ import Link from "next/link";
 export default function Header() {
   return (
     <header className="flex items-center justify-between space-x-2 font-bold px-10 py-5">
-      {/* <div className="absolute w-96 h-96 bg-black z-[-10] right-1/4"></div> */}
       <div className="flex items-center space-x-2">
         <Link href="#">
           <Image
@@ -15,20 +14,19 @@ export default function Header() {
             alt="logo"
           />
         </Link>
-        {/* <h1 className="text-lg font-medium">DORIS</h1> */}
       </div>
 
       <div className="flex items-center space-x-2 gap-5">
-        <p className="mt-5 md:mt-2 text-[#707070] text-lg font-medium">
-          PROJECTS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <p className="mt-5 md:mt-2 text-[#707070] text-xs md:text-lg font-medium">
+          PROJECT&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
           INSIGHT&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
           TECH&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; MORE
         </p>
         <Link
           href="https://www.linkedin.com/in/doris-siu/"
-          className="px-5 py-3 md:text-base bg-white text-[#f3647d] flex items-center rounded-full text-center text-lg font-medium"
+          className="px-2 py-1 md:px-5 md:py-3 bg-white text-[#f3647d] flex items-center rounded-full text-center text-sm md:text-lg font-medium"
         >
-          Get in touch
+          Contact
         </Link>
       </div>
     </header>

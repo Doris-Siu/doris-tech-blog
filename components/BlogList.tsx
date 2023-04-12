@@ -18,12 +18,12 @@ export default function BlogList({ posts }: Props) {
             <div className="group cursor-pointer">
               <div className="relative w-full h-80 drop-shadow-xl group-hover:scale-105 transition-transform duration-200 ease-out">
                 <Image
-                  className="object-cover object-left lg:object-center"
+                  className="object-fill lg:object-center"
                   src={urlFor(post.coverImage).url()}
                   alt={post.author.name}
                   fill
                 />
-                <div className="absolute bottom-0 w-full bg-opacity-20 backdrop-blur-lg text-white p-5 flex justify-between">
+                <div className="absolute bottom-0 w-full bg-opacity-20 backdrop-blur-lg text-white p-5 flex justify-between text-sm md:text-base">
                   <div>
                     <p className="font-bold">{post.title}</p>
                     <p>
@@ -38,7 +38,7 @@ export default function BlogList({ posts }: Props) {
                     {post.tags.map((tag, index) => (
                       <div
                         key={index}
-                        className="bg-[#f3647d] text-center text-white px-3 py-1 rounded-full text-em font-semibold"
+                        className="bg-[#f3647d] text-center text-white px-3 py-1 rounded-full text-xs md:text-base text-em font-semibold"
                       >
                         <p>{tag}</p>
                       </div>
