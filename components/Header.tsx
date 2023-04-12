@@ -26,7 +26,7 @@ export default function Header() {
           href="https://www.linkedin.com/in/doris-siu/"
           className="px-2 py-1 md:px-5 md:py-3 bg-white text-[#f3647d] flex items-center rounded-full text-center text-sm md:text-lg font-medium"
         >
-          Contact
+          Linkedin
         </Link>
       </div>
     </header>
