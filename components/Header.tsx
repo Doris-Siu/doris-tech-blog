@@ -23,12 +23,20 @@ export default function Header() {
           <p>TECH</p>
           <p>MORE</p>
         </div>
-        <Link
-          href="https://www.linkedin.com/in/doris-siu/"
-          className="px-2 py-1 md:px-5 md:py-3 bg-white text-[#f3647d] flex items-center rounded-full text-center text-sm md:text-lg font-medium"
-        >
-          Linkedin
-        </Link>
+        <div className="flex flex-col space-y-2 md:flex-row md:space-x-5 md:space-y-0">
+          <Link
+            href="https://www.linkedin.com/in/doris-siu/"
+            className="px-2 py-1 md:px-4 md:py-3 bg-white text-[#f3647d] flex items-center rounded-full text-center text-sm md:text-lg font-medium"
+          >
+            Linkedin
+          </Link>
+          <Link
+            href="https://github.com/Doris-Siu"
+            className="px-2 py-1 md:px-5 md:py-3 bg-white text-[#f3647d] flex items-center rounded-full text-center text-sm md:text-lg font-medium"
+          >
+            GitHub
+          </Link>
+        </div>
       </div>
     </header>
   );
