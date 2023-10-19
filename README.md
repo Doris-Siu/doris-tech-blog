@@ -1,5 +1,5 @@
-# doris-tech-blog
-This is a  tech blog where I share my passion and knowledge of development. It is a responsive and user-friendly website where all the blog articles come from a headless CMS service called Sanity. Whether you are a beginner or an expert, my blog content is designed to inform and engage.
+# Tech Blog
+This is a tech blog where I share my passion and knowledge of development. It is a responsive and user-friendly website where all the blog articles come from a headless CMS service configured and integrated into code called Sanity. Whether you are a beginner or an expert, my blog content is designed to inform and engage.
 
 ![mobile (1)](https://github.com/Doris-Siu/doris-tech-blog/assets/107772913/097bc31f-e5b8-4d50-9c08-b409c5a74395)
 
