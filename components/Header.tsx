@@ -17,12 +17,6 @@ export default function Header() {
       </div>
 
       <div className="flex items-center space-x-2 gap-5">
-        <div className="flex gap-2 pb-3 pr-0 md:pb-0 md:gap-8 mt-5 md:mt-2 text-[#707070] text-xs md:text-lg font-medium">
-          <p>PROJECT</p>
-          <p>INSIGHT</p>
-          <p>TECH</p>
-          <p>MORE</p>
-        </div>
         <div className="flex flex-col space-y-2 md:flex-row md:space-x-5 md:space-y-0">
           <Link
             href="https://www.linkedin.com/in/doris-siu/"
